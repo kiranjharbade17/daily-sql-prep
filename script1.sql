@@ -90,6 +90,63 @@ when 28 then 50000
 end;
 select*from users;
 
-update users set salary 
+update users set salary = 45000 where id=22;
+update users set salary = 50000, name= 'parth', email = 'parth@example.com' where id=23;
+
+#questions
+-- update users
+-- set salary = 70000
+-- where id=5;
+
+-- update users
+-- set salary = salary+10000
+-- where salary<60000;
+
+-- update users
+-- set name = 'aisha  khan'
+-- where email = 'aisha@example.com';
+
+#deleting data
+-- delete from users where salary<65000;
+delete from users where id=22;
+select*from users;
+
+#Delete
+-- where condition k sath selected rows ko hi delete krta h
+-- delete from users where id=1;
+
+#Truncate
+-- sari rows/data ek bar m delete kr deta h pr table structure jesa ka vesa rkhta h
+-- truncate table users;
+
+#Drop
+-- entire table delete with structure
+-- drop table users;
+
+insert into users(name, email, gender, date_of_birth) values
+( 'Alice', 'alice@example.com', 'Female', '1995-05-14');
+
+insert into users(id, name, email, gender, date_of_birth)values
+(1,'kittu','kittu@gmail.com', 'male', '2006-02-05');
+
+select id,name from users;
+
+update users
+set id=2 where name='parth';
+
+update users
+set id = case id 
+when 25 then 4
+when 26 then 5 
+when 27 then 6 
+when 28 then 7 
+when 29 then 8 
+else id
+end;
+update users
+set id=8 where id=37;
+select*from users
+
+
 
 
