@@ -17,15 +17,59 @@ insert into users  (name, email, gender, date_of_birth) values
 ('omi', 'omi@gmail.com', 'Female', '2005-11-17'),
 ('kiran', 'kiran@gmail.com','Female','2006-11-11');
 
+# renaming a table 
+rename table users to customer;
+select* from customer;
+rename table customer to users;
+
+#altetring a table
+# Alter table
+-- -add a column 
+-- -drop a column
+-- -modify a column type
+alter table users add column is_active boolean default false;
+alter table users drop column is_active;
+alter table users modify name varchar(150);
+
+# querying data using select
 select*from users;
 select name, email from users;
 
-#filtering with where
 
+#filtering with where
+# =, !=, <>, < and >
 select*from users where gender = 'male';
 select * from users where gender != 'male';
 select * from users where gender <> 'male';
 select * from users where date_of_birth > '1995-01-01';
 select * from  users where id > 25;
-select * from user where id= 5;
+
+#working with null
+select*from users where date_of_birth is null;
+select*from users where date_of_birth is not null;
+
+#between
+select*from users where id between '23' and '27';
+select*from users where date_of_birth between '1999-01-01' and '2005-01-01';
+# in
+select*from users where gender in('male','female');
+# and/or
+select*from users where gender='male' && date_of_birth>'1999-01-01';
+select*from users where gender ='female' || gender='male';
+select*from users where id='22' or id='2';
+
+-- querying data 
+select*from users
+where gender = 'male' 
+order by date_of_birth desc;
+select*from users where gender='female' limit 2;
+
+alter table users add column salary int;
+select*from users;
+
+select count(*)
+from users;
+select
+
+
 
