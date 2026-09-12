@@ -69,7 +69,27 @@ select*from users;
 
 select count(*)
 from users;
-select
 
+update users set salary = 90000 where id=22;
+update users set salary = 95000 where id=23;
+update users set salary = 80000 where id=24;
+update users set salary = 40000 where id=25;
+update users set salary = 30000 where id=26;
+update users set salary = 70000 where id=27;
+update users set salary = 100000 where id=28;
+
+# or update + case se ek hi query m ho jaega
+update users set salary = case id
+when 22 then 50000
+when 23 then 50000
+when 24 then 50000
+when 25 then 50000
+when 26 then 50000
+when 27 then 50000
+when 28 then 50000
+end;
+select*from users;
+
+update users set salary 
 
 
