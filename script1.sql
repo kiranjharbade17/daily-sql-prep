@@ -147,6 +147,42 @@ update users
 set id=8 where id=37;
 select*from users
 
+#SQL Functions
+
+ -- 1) Aggregate functions
+ 
+ -- this returns a single value from a set of rows
+ select count(*) from users;
+ select count(*) from users where gender='female';
+ 
+ select  max(salary) as max_salary, min(salary) as min_salary from users;
+ 
+ select sum(salary)as total_payout from users;
+ select avg(salary)as avg_salary from users;
+ 
+ select gender, sum(salary) from users
+ group by gender;
+
+ select*from users;
+ 
+-- 2) String functions
+ 
+select name, length(name) as name_length from users;
+select name, lower(name) as lowercase_name from users;
+select name, upper(name) as uppercase_name from users;
+select concat(name, '<', email, 'z') as
+user_concat from users;
+
+# 3) Date function
+select now();
+select name, year(date_of_birth) as birth_year from users;
+select name, month(date_of_birth) as birth_month from users;
+select name, day(date_of_birth) as birth_day from users;
+
+
+ 
+ 
+
 
 
 
