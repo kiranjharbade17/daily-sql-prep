@@ -179,6 +179,11 @@ select name, year(date_of_birth) as birth_year from users;
 select name, month(date_of_birth) as birth_month from users;
 select name, day(date_of_birth) as birth_day from users;
 
+select name, datediff(curdate(), date_of_birth)
+as days_lived from users;
+
+select name, timestampdiff(year, date_of_birth, curdate()) as age from users;
+
 
  
  
