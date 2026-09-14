@@ -184,6 +184,23 @@ as days_lived from users;
 
 select name, timestampdiff(year, date_of_birth, curdate()) as age from users;
 
+# 4) mathematical functions
+select salary,
+round(salary) as rounded,
+floor(salary) as floored,
+ceil(salary) as ceiled
+from users;
+
+select id, mod(id,2) as remainder from users;
+
+#5) conditional functions
+
+select name, gender,
+if(gender='female', 'ha', 'na') as is_female
+from users;
+
+
+
 
  
  
