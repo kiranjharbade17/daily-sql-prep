@@ -199,7 +199,7 @@ select name, gender,
 if(gender='female', 'ha', 'na') as is_female
 from users;
 
-
+# autocommit and transactions
 
 
  
