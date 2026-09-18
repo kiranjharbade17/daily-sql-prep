@@ -200,6 +200,18 @@ if(gender='female', 'ha', 'na') as is_female
 from users;
 
 # autocommit and transactions
+set autocommit = 0;
+update users set salary = 76000 where id = 1;
+rollback;
+update users set salary = 100000 where id = 1;
+commit;
+select*from users
+
+set autocommit = 1;
+
+
+
+
 
 
  
