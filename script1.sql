@@ -209,6 +209,8 @@ select*from users
 
 set autocommit = 1;
 
+select*from users;
+
 
 
 
