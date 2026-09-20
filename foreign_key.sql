@@ -9,3 +9,19 @@ pincode int(10),
 foreign key(user_id) references users(id)
 );
 select*from adresses;
+
+show create table
+adresses;
+
+#for delete the foreign key
+alter table adresses drop foreign key adresses_ibfk_1;
+
+#for delete foreign key column
+# alter table adresses drop column user_id;
+
+# add foreign key 
+ALTER TABLE adresses
+ADD CONSTRAINT adresses_ibfk_1 FOREIGN KEY (user_id) REFERENCES users(id);
+
+
+
