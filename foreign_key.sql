@@ -42,6 +42,18 @@ ALTER TABLE adresses
 ADD CONSTRAINT adresses_ibfk_1 FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE 
 CASCADE;
 
+INSERT INTO adresses (id, user_id, street, city, state, pincode)
+VALUES
+(1,1, 'MG Road', 'Indore', 'Madhya Pradesh', 452001),
+(2,2,'Vijay Nagar', 'Indore', 'Madhya Pradesh', 452010),
+(3,3, 'Park Street', 'Kolkata', 'West Bengal', 700016),
+(4,4, 'Connaught Place', 'New Delhi', 'Delhi', 110001),
+(5,5, 'Bandra West', 'Mumbai', 'Maharashtra', 400050),
+(6,6, 'Kolar Road', 'Bhopal', 'Madhya Pradesh', 462042),
+(7,7, 'Civil Lines', 'Nagpur', 'Maharashtra', 440001),
+(8,8, 'Koramangala', 'Bangalore', 'Karnataka', 560034);
+
+select*from adresses;
 
 
 
