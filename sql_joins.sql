@@ -52,4 +52,21 @@ from employees
 right join departments
 on employees.department_id = departments.dept_id;
 
+-- Questions
+select employees.emp_name, departments.dept_name
+from employees
+inner join departments
+on employees.department_id = departments.dept_id;
+
+select employees.emp_name, employees.salary
+from employees
+inner join departments
+on employees.department_id = departments.dept_id
+where dept_id = 101;
+
+select employees.emp_name, employees.salary, departments.dept_name
+from employees
+inner join departments
+on employees.department_id = departments.dept_id;
+
 

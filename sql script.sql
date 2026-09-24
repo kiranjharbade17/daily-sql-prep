@@ -48,4 +48,14 @@ INSERT INTO orders (user_id, product_id, quantity, order_date) VALUES
 DELETE FROM users WHERE user_id >= 4;
 use quick_mart_db;
 
-select*from users
+select*from customer;
+-- RENAME TABLE users TO customer;
+
+drop table orders;
+select*from orders;
+
+truncate table product;
+select*from product;
+
+
+
